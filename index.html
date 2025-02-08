@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Find weather of any city</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">                               
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="app-container">
+        <div class="search-box">
+            <input type="text" name="city" id="city-input" placeholder="Enter City Name" spellcheck="false">
+            <button id="search"><img src="https://www.pngkey.com/png/detail/15-152459_open-search-bar-icon-png.png" alt=""></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+
+        <div class="weather">
+            <img src="images/clear.png" alt="" class="weather-icon">
+            <p id="condition">Clear</p>
+
+            <h1 id="temp"></h1>
+            <h2 id="city">Kolkata</h2>
+
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional sections for weather forecast and suggestions -->
+            <!-- <div class="forecast">
+                <h3>Next 7 Days Forecast</h3>
+                <ul id="forecast-list"></ul>
+            </div> -->
+            <button id="show-forecast-btn">Next 7 Days</button>
+
+<!-- Draggable box to show 7-day forecast -->
+<div id="forecast-box" class="forecast-box">
+    <div id="forecast-header">
+        <span>7-Day Forecast</span>
+        <button id="close-forecast-btn">X</button>
+    </div>
+    <ul id="forecast-list"></ul>
+</div>
+
+
+            <div class="clothing-suggestions">
+                <h3>Clothing Suggestions</h3>
+                <p id="clothing"></p>
+            </div>
+
+            <div class="weather-quotes">
+                <h3>Weather Quote</h3>
+                <p id="quote"></p>
+            </div>
+
+            <div class="music-playlist">
+                <h3>Music Playlist Based on Weather</h3>
+                <ul id="playlist"></ul>
+               
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
